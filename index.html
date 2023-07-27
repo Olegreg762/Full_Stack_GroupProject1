@@ -10,71 +10,68 @@
 <body class = "has-background-primary-dark">
     <header class = "header has-background-info-dark"></header>
     <main>
-        <section class = "level-center px-6 py-6 mx-6 my-0">
-            <div>
-                <div class = "panel">   
-                    <h1 class = "panel-heading has-background-success-dark has-text-white">Air Quality Tracker</h1>
-                        <div class = "has-background-success py-2 is-flex is justify-content-end">
-                            <div class = "mx-3 select">
-                                <select>
-                                    <option>Select State</option>
-                                    <option>AL</option>
-                                    <option>AK</option>
-                                    <option>AZ</option>
-                                    <option>AR</option>
-                                    <option>CA</option>
-                                    <option>CO</option>
-                                    <option>CT</option>
-                                    <option>DE</option>
-                                    <option>FL</option>
-                                    <option>GA</option>
-                                    <option>HI</option>
-                                    <option>ID</option>
-                                    <option>IL</option>
-                                    <option>IN</option>
-                                    <option>IA</option>
-                                    <option>KS</option>
-                                    <option>KY</option>
-                                    <option>LA</option>
-                                    <option>ME</option>
-                                    <option>MD</option>
-                                    <option>MA</option>
-                                    <option>MI</option>
-                                    <option>MN</option>
-                                    <option>MS</option>
-                                    <option>MO</option>
-                                    <option>MT</option>
-                                    <option>NE</option>
-                                    <option>NV</option>
-                                    <option>NV</option>
-                                    <option>NH</option>
-                                    <option>NJ</option>
-                                    <option>NM</option>
-                                    <option>NY</option>
-                                    <option>NC</option>
-                                    <option>ND</option>
-                                    <option>OH</option>
-                                    <option>OK</option>
-                                    <option>OR</option>
-                                    <option>PA</option>
-                                    <option>RI</option>
-                                    <option>SC</option>
-                                    <option>SD</option>
-                                    <option>TN</option>
-                                    <option>TX</option>
-                                    <option>UT</option>
-                                    <option>VT</option>
-                                    <option>VA</option>
-                                    <option>WA</option>
-                                    <option>WV</option>
-                                    <option>WI</option>
-                                    <option>WY</option>
-                                </select> 
-                            </div>
-                            <button class="mx-3 button">Submit</button>
-                        </div>
-                </div>        
-            </div> 
+        <section class = "State-Container">
+            <h1 class = "Air-Quality-Title">Air Quality Tracker</h1>
+            <div class="select">
+                <select id="state_selector">
+                    <option>Select State</option>
+                    <option>AL</option>
+                    <option>AK</option>
+                    <option>AZ</option>
+                    <option>AR</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DE</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>HI</option>
+                    <option>ID</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>IA</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>ME</option>
+                    <option>MD</option>
+                    <option>MA</option>
+                    <option>MI</option>
+                    <option>MN</option>
+                    <option>MS</option>
+                    <option>MO</option>
+                    <option>MT</option>
+                    <option>NE</option>
+                    <option>NV</option>
+                    <option>NV</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NY</option>
+                    <option>NC</option>
+                    <option>ND</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PA</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TN</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VT</option>
+                    <option>VA</option>
+                    <option>WA</option>
+                    <option>WV</option>
+                    <option>WI</option>
+                    <option>WY</option>
+                </select>
+              </div>
+        </section>
+        <section class = "Results-Container">
+            <div class = "List-of-Results" id = "resultsList">
+            </div>
         </section>
     </main>
     <section class = "Results-Container">
