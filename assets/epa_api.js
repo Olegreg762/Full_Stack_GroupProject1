@@ -8,13 +8,21 @@ function get_park_aqi (input){
             return response.json();
         })
         .then(function(data){
+            console.log(data)
             for( let r = 0; r < $("a").length; r++){
-                $(".Results-Container a").remove()
+                $(".Results-Container .result").remove()
+                
             }
             for(let i = 0; i < data.data.length; i++){
                 if(data.data[i].designation !== "National Historic Trail"){
                     $(`#result${i}`).append($(`#resultsList`));
-                    $(`<a href="${data.data[i].url}" class="is-flex is-justify-content-space-between card box" id="park_url${i}">${data.data[i].fullName}<span id="aqi_number${i}"></span></a>`).insertAfter($(`#resultsList`));
+                    $(`<div class = "is-flex is-justify-content-space-between card box result">
+                        <a href="${data.data[i].url}" class="" id="park_url${i}">${data.data[i].fullName}</a>
+                        <img src =${data.data[i].images[0].url} alt= "image of the national park" width = "200" height = "200">
+                        <p>${data.data[i].description}</p>
+                        <a href= ${data.data[i].directionsUrl}>Directions</a>
+                        <span id="aqi_number${i}"></span>
+                        </div>`).insertAfter($(`#resultsList`));
                 const epa_url = `https://www.airnowapi.org/aq/observation/latLong/current/?format=application/json&latitude=${data.data[i].latitude}&longitude=${data.data[i].longitude}&distance=50&API_KEY=${epa_api}`
             fetch(epa_url)
                 .then(function(response){
