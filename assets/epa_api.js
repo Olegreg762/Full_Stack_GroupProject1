@@ -20,7 +20,7 @@ function get_park_aqi (input){
                         <a href="${data.data[i].url}" class="" id="park_url${i}">${data.data[i].fullName}</a>
                         <img src =${data.data[i].images[0].url} alt= "image of the national park" width = "200" height = "200">
                         <p>${data.data[i].description}</p>
-                        <a href= ${data.data[i].directionsUrl}>Directions</a>
+                        <a href= ${data.data[i].directionsUrl}>Directions </a>
                         <span id="aqi_number${i}"></span>
                         </div>`).insertAfter($(`#resultsList`));
                 const epa_url = `https://www.airnowapi.org/aq/observation/latLong/current/?format=application/json&latitude=${data.data[i].latitude}&longitude=${data.data[i].longitude}&distance=50&API_KEY=${epa_api}`
@@ -31,12 +31,13 @@ function get_park_aqi (input){
                 .then(function(data){
                     if(data[0] == null){
                         $(`#aqi_number${i}`).text(` No Data Avaliable`)
+                        plot_aqi(`aqi_number${i}`, "No Data") 
                     }else{
-                        $(`#aqi_number${i}`).text(` Air Quality ${data[0].AQI} ${data[0].Category.Name}`)
+                        // $(`#aqi_number${i}`).text(` Air Quality ${data[0].AQI} ${data[0].Category.Name}`)
+                         plot_aqi(`aqi_number${i}`, data[0].AQI) 
                     }
                 })
             }}
         })
     };
-  
- 
+    
