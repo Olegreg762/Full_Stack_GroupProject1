@@ -17,7 +17,7 @@ function get_park_aqi (input){
                 if(data.data[i].designation !== "National Historic Trail"){
                     $(`#result${i}`).append($(`#resultsList`));
                     $(`<div class = "is-flex is-justify-content-space-between has-background-info card box result">
-                        <a href="${data.data[i].url}" class="has-text-white mx-4" id="park_url${i}">${data.data[i].fullName}</a>
+                        <a href="${data.data[i].url}" style="width: 100px; height: 150px" class="has-text-white mx-2" id="park_url${i}">${data.data[i].fullName}</a>
                         <img src =${data.data[i].images[0].url} class="mx-2" alt= "image of the national park" width = "200" height = "200">
                         <p class= "mx-2 has-text-white">${data.data[i].description}</p>
                         <a href= ${data.data[i].directionsUrl} class="mx-2 has-text-info-light">Directions </a>
