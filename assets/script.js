@@ -5,14 +5,31 @@ $(document).ready(function(){
   })
 })
 
-function plot_aqi(div, aqi_number){ 
-  var data = [
+function plot_aqi(div, aqi_number){
+  // aqi_number = 82
+  let font_color = ""
+  if(aqi_number < 50){
+    font_color = "green"
+  }else if(aqi_number <100){
+    font_color = "darkgoldenrod"
+  }else if(aqi_number<150){
+    font_color = "darkorange"
+  }else if(aqi_number<200){
+    font_color = "red"
+  }else if(aqi_number<300){
+    font_color = "purple"
+  }else if(aqi_number<500){
+    font_color = "crimson"
+  }else{
+    font_color = "black"
+  };
+  const data = [
       {
           type: "indicator",
           mode: "number+gauge",
           value: aqi_number,
           domain: { x: [0, 1], y: [0, 1] },
-          title: { text: "<b>AQI</b>" },
+          title: {text: "<b>AQI</b>"},
           gauge: {
           shape: "bullet",
           axis: { 
@@ -20,7 +37,7 @@ function plot_aqi(div, aqi_number){
               tickmode: "array", 
               tickvals: [25, 75, 125, 175, 250, 400], 
               ticktext: ['Good', 'Moderate', 'Unhealthy For Sensitive Groups', 'Unhealthy', 'Very Unhealthy', 'Hazardous'],
-              tickangle: 20, 
+              tickangle: 18, 
               
           },
           steps: [
@@ -36,8 +53,19 @@ function plot_aqi(div, aqi_number){
       }
       ];
 
-      var layout = { width: 600, height: 200 };
-      var config = { responsive: true };
+      const layout = { width: 600, 
+                     height: 100,
+                     margin:{
+                      t:0,
+                      r:50,
+                      l:60,
+                      b:80
+                     },
+                     font:{
+                      color: font_color
+                     }
+      };
+      const config = { responsive: true };
 
       return Plotly.newPlot(div, data, layout, config);
   };
