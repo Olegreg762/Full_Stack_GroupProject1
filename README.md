@@ -2,7 +2,14 @@
   ![GPL](https://img.shields.io/badge/License-GPLv3-blue.svg)
 
   ## Description
-  Get Air Quality for National Parks and other data
+  Get Air Quality for National Parks and other data.<br>
+  We use several different method to gather data and display it.
+  [Plotly Bullet Gauge](https://plotly.com/javascript/indicator/#bullet-gauge)
+  [jQuery](https://jquery.com/)
+  [Bulma](https://bulma.io/)
+  [US Government AirNow Api](https://docs.airnowapi.org/)
+  [US Government National Park API](https://www.nps.gov/subjects/developer/api-documentation.htm)
+
 
   ## Table of Contents
   * [Installation](#installation)
