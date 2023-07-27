@@ -32,11 +32,11 @@ function get_park_aqi (input){
                     if(data[0] == null){
                         $(`#aqi_number${i}`).text(` No Data Avaliable`)
                     }else{
-                        $(`#aqi_number${i}`).text(` Air Quality ${data[0].AQI} ${data[0].Category.Name}`)
+                        // $(`#aqi_number${i}`).text(` Air Quality ${data[0].AQI} ${data[0].Category.Name}`)
+                         plot_aqi(`aqi_number${i}`, data[0].AQI) 
                     }
                 })
             }}
         })
     };
-  
- 
+    
