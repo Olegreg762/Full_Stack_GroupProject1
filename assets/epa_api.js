@@ -11,9 +11,11 @@ function get_park_aqi (input){
         .then(function(data){
             console.log(data)
             for( let r = 0; r < $("a").length; r++){
-                $(".Results-Container .result").remove()
+                $(".results-container .result").remove()
                 
             }
+            
+            
             for(let i = 0; i < data.data.length; i++){
                 if(data.data[i].designation !== "National Historic Trail"){
                     $(`#result${i}`).append($(`#resultsList`));

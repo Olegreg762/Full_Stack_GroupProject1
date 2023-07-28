@@ -3,19 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>Air Quality Tracker</title>
+    <title>National Park AQI Tool</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+      .forest-background {
+        background-image: url('https://tinyurl.com/5estdzkj'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 300px; /* Set an appropriate height for the background */
+        text-align: center;
+        padding: 2rem;
+      }
+      .results-list {
+        margin-top: 1rem;
+      }
+      .card {
+        margin-bottom: 0.5rem;
+      }
+      .title {
+      color:white
+    }
+      .subtitle {
+        color: #fff;
+      }
+      
+    </style>
 </head>
-<body class = "has-background-primary-dark" style="height: 4100px">
-    <main>
-        <section class = "px-6 py-6 mx-6 my-0">
-            <div class = "px-6 py-6 mx-6 my-6 is-flex is-justify-content-center">
-                <div class = "panel" style="width: 800px;">
-                    <h1 class = "panel-heading has-background-success-dark has-text-white">Air Quality Tracker</h1>
-                        <div class = "has-background-success py-2 is-flex is justify-content-end">
-                            <div class = "mx-3 select">
-                                <select id="state_selector">
+<section class="section forest-background">
+    <div class="container">
+      <h1 class="title is-1">Welcome to the National Park AQI TOOL</h1>
+      <p class="subtitle is-3">Let's get outdoors!</p>
+    </div>
+  </section>
+  
+
+  <section class="section">
+    <div class="container">
+        <div class="center">
+      <div class="columns">
+          <div class="field">
+            <label class="label">Select a State:</label>
+            <div class="control">
+              <div class="select">
+                <select id="stateSelect" onchange="get_park_aqi(this.value)">
+                  <option value="" disabled selected>Select a state</option>
                                     <option>Select State</option>
                                     <option>AL</option>
                                     <option>AK</option>
@@ -74,8 +106,8 @@
                 </div>
             </div>
         </section>
-        <section class = "Results-Container">
-            <div class = "List-of-Results" id = "resultsList">
+        <!-- <section class = "Results-Container"></section> -->
+        <div id= "searchResultsContainer" class = "results-container">
             </div>
         </section>
     </main>
