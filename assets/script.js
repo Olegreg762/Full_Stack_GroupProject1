@@ -25,6 +25,7 @@ function plot_aqi(div, aqi_number){
   };
   const data = [
       {
+
           type: "indicator",
           mode: "number+gauge",
           value: aqi_number,
@@ -35,10 +36,10 @@ function plot_aqi(div, aqi_number){
           axis: { 
               range: [null, 500],
               tickmode: "array", 
-              tickvals: [25, 75, 125, 175, 250, 400], 
-              ticktext: ['Good', 'Moderate', 'Unhealthy For Sensitive Groups', 'Unhealthy', 'Very Unhealthy', 'Hazardous'],
+              tickvals: [25, 75, 125, 175, 250, 400],
+              ticktext: ['Good', 'Moderate', 'Sensitive', 'Unhealthy', 'Very Unhealthy', 'Hazardous'],
               tickangle: 18, 
-              
+          
           },
           steps: [
               { range: [0, 50], color: "green" },
@@ -57,10 +58,11 @@ function plot_aqi(div, aqi_number){
                      height: 100,
                      margin:{
                       t:0,
-                      r:50,
+                      r:70,
                       l:60,
-                      b:80
+                      b:70
                      },
+                     paper_bgcolor:"#b1f2ff",
                      font:{
                       color: font_color
                      }
