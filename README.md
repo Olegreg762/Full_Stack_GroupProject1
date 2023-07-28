@@ -4,11 +4,11 @@
   ## Description
   Get Air Quality for National Parks and other data.<br>
   We use several different methods and technologies to gather data and display it.<br>
-  The CSS frame [Bulma](https://bulma.io/) created the majority of styling.<br>
-  [jQuery](https://jquery.com/) was used to create DOM elements.<br>
+  The CSS framework [Bulma](https://bulma.io/) created the majority of styling.<br>
+  [jQuery](https://jquery.com/) was used to create DOM elements and for DOM traversal.<br>
   To make the graph for the air quality numbers [Plotly Bullet Gauge](https://plotly.com/javascript/indicator/#bullet-gauge) was used.<br>
-  The data we gather came from 2 different APIs the [US Government National Park API](https://www.nps.gov/subjects/developer/api-documentation.htm) was used to get the National Parks by State, their image, description and directions.<br>
-  The [US Government AirNow Api](https://docs.airnowapi.org/) was used to ge the Air Quality Index numbers for each park.
+  The data we gathered came from 2 different APIs the [US Government National Park API](https://www.nps.gov/subjects/developer/api-documentation.htm) was used to get the National Parks in a chosen state, their image, description and directions.<br>
+  The [US Government AirNow Api](https://docs.airnowapi.org/) was used to get the Air Quality Index numbers for each park.
   
   ![screenshot](./assets/images/placeholder.png)
 
