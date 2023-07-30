@@ -26,9 +26,11 @@ function get_park_aqi (input){
                 const epa_url = `https://www.airnowapi.org/aq/observation/latLong/current/?format=application/json&latitude=${data.data[i].latitude}&longitude=${data.data[i].longitude}&distance=50&API_KEY=${epa_api}`
             fetch(epa_url)
                 .then(function(response){
+                    // If reponse not 200 this block run and the error will console log
                     if(response.status !== 200){
+                        console.log("Second Key Used")
                         const epa_url2 = `https://www.airnowapi.org/aq/observation/latLong/current/?format=application/json&latitude=${data.data[i].latitude}&longitude=${data.data[i].longitude}&distance=50&API_KEY=${epa_api2}`
-                        fetch(epa_url2)
+                         return fetch(epa_url2)
                             .then(function(response){
                                 return response.json()
                             })
