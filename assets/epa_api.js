@@ -11,7 +11,7 @@ function get_park_aqi (input){
         })
         .then(function(data){
             for( let r = 0; r < $("a").length; r++){
-                $(".results-container .result").remove() 
+                $(".Results-Container .result").remove() 
             }
             for(let i = 0; i < data.data.length; i++){
                 if(data.data[i].designation !== "National Historic Trail"){
