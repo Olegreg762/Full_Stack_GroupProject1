@@ -6,7 +6,6 @@ $(document).ready(function(){
 })
 
 function plot_aqi(div, aqi_number){
-  // aqi_number = 82
   let font_color = ""
   if(aqi_number < 50){
     font_color = "green"

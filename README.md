@@ -10,7 +10,7 @@
   The data we gathered came from 2 different APIs the [US Government National Park API](https://www.nps.gov/subjects/developer/api-documentation.htm) was used to get the National Parks in a chosen state, their image, description and directions.<br>
   The [US Government AirNow Api](https://docs.airnowapi.org/) was used to get the Air Quality Index numbers for each park.
   
-  ![screenshot](./assets/images/placeholder.png)
+  ![screenshot](./assets/images/screenshot0.png)
 
   ## Table of Contents
   * [Installation](#installation)

@@ -1,7 +1,29 @@
 :root {
+    background-color:#0b626b;
     --color-1: #002c37;
     --color-2: #103464;
     --color-3: #0b626b;
     --color-4: #28728f;
     --color-5: #92b7a6;
+}
+.forest-background {
+    background-image: url('https://tinyurl.com/5estdzkj'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 300px; /* Set an appropriate height for the background */
+    text-align: center;
+    padding: 2rem;
+}
+.results-list {
+    margin-top: 1rem;
+}
+.card {
+    margin-bottom: 0.5rem;
+}
+.title {
+    color:white
+}
+.subtitle {
+    color: #fff;
 }
