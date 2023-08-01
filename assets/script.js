@@ -63,7 +63,7 @@ function plot_aqi(div, aqi_number){
                       l:60,
                       b:50
                      },
-                     paper_bgcolor:"#b1f2ff",
+                     paper_bgcolor:"#46b5ff",
                      font:{
                       color: font_color
                      }
