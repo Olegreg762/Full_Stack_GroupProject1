@@ -55,8 +55,8 @@ function plot_aqi(div, aqi_number){
       }
       ];
 
-      const layout = { width: 500, 
-                     height: 250,
+      const layout = { width: 300, 
+                     height: 200,
                      margin:{
                       t:70,
                       r:70,

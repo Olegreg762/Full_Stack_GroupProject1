@@ -16,12 +16,12 @@ function get_park_aqi (input){
             for(let i = 0; i < data.data.length; i++){
                 if(data.data[i].designation !== "National Historic Trail"){
                     $(`#result${i}`).append($(`#resultsList`));
-                    $(`<div class = "is-flex is-justify-content-space-between is-align-items-center has-background-info card box result">
-                        <a href="${data.data[i].url}" style="width: 100px; height: 150px" class="has-text-white mx-2" id="park_url${i}">${data.data[i].fullName}</a>
-                        <img src =${data.data[i].images[0].url} class="mx-2" alt= "image of the national park" width = "200" height = "200">
+                    $(`<div id = "results-card" class = "is-flex is-justify-content-space-between is-align-items-center has-background-info card box result">
+                        <a href="${data.data[i].url}" class="has-text-white mx-2" id="park_url${i}"><h2 id = "park-title">${data.data[i].fullName}</h2></a>
+                        <img src =${data.data[i].images[0].url} class="mx-2 park-img" alt= "image of the national park" width = "200" height = "200">
                         <p class= "mx-2 has-text-white">${data.data[i].description}</p>
-                        <a href= ${data.data[i].directionsUrl} class="mx-2 has-text-info-light">Directions </a>
-                        <span class="level-right mx-2 has-text-warning" id="aqi_number${i}"></span>
+                        <a href= ${data.data[i].directionsUrl} class="mx-2 has-text-info-light button is-outlined" id = "directions" >Directions </a>
+                        <span class="aqi-number level-right mx-2 has-text-warning is-flex-direction-column" id="aqi_number${i}"></span>
                         </div>`).insertAfter($(`#resultsList`));
                 const epa_url = `https://www.airnowapi.org/aq/observation/latLong/current/?format=application/json&latitude=${data.data[i].latitude}&longitude=${data.data[i].longitude}&distance=50&API_KEY=${epa_api}`
             fetch(epa_url)

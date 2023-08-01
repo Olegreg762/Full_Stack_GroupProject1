@@ -31,6 +31,30 @@
 a{
     border-width: 10px;
 }
-.main-svg{
-    background: none !important;
+
+#directions {
+    color: black !important;
+}
+.aqi-number{
+    text-align: center;
+}
+
+@media only screen and (max-width: 1300px){
+
+    #results-card{
+        flex-direction: column;
+    }
+    #park-title{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .park-img{
+        margin: 10px !important;
+    }
+    #results-card p {
+        margin: 10px !important;
+    }
+    #directions{
+        margin: 10px !important;
+    }
 }
