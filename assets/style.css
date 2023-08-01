@@ -38,6 +38,9 @@ a{
 .aqi-number{
     text-align: center;
 }
+.main-svg{
+    border-radius: 5%;
+}
 
 @media only screen and (max-width: 1300px){
 
