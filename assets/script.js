@@ -7,6 +7,7 @@ $(document).ready(function(){
 
 function plot_aqi(div, aqi_number){
   let font_color = ""
+  let title = "AQI"
   if(aqi_number < 50){
     font_color = "green"
   }else if(aqi_number <100){
@@ -21,6 +22,7 @@ function plot_aqi(div, aqi_number){
     font_color = "crimson"
   }else{
     font_color = "black"
+    title = "N/A"
   };
   const data = [
       {
