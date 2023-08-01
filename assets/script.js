@@ -31,7 +31,7 @@ function plot_aqi(div, aqi_number){
           domain: { x: [0, 1], y: [0, 1] },
           title: {text: "<b>AQI</b>"},
           gauge: {
-          shape: "bullet",
+          shape: "gauge",
           axis: { 
               range: [null, 500],
               tickmode: "array", 
@@ -48,18 +48,18 @@ function plot_aqi(div, aqi_number){
               { range: [200, 300], color: "purple"},
               { range: [300,500], color: "maroon"}
           ],
-          bar: {color: "blue"},
+          bar: {color: "white"},
           }
       }
       ];
 
-      const layout = { width: 600, 
-                     height: 100,
+      const layout = { width: 500, 
+                     height: 250,
                      margin:{
-                      t:0,
+                      t:70,
                       r:70,
                       l:60,
-                      b:70
+                      b:50
                      },
                      paper_bgcolor:"#b1f2ff",
                      font:{

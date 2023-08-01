@@ -27,3 +27,6 @@
 .subtitle {
     color: #fff;
 }
+img{
+    max-width: 100px;
+}
