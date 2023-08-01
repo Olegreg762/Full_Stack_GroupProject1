@@ -1,6 +1,8 @@
+/* Sets background color for page */
 :root {
     background-color:#0b626b;
 }
+/* Creates background and sets Hero */
 .forest-background {
     background-image: url('https://tinyurl.com/5estdzkj'); 
     background-size: cover;
@@ -10,37 +12,43 @@
     text-align: center;
     padding: 2rem;
 }
-.results-list {
+/* Margins for results list */
+.resultslist {
     margin-top: 1rem;
 }
+/* Margins for card */
 .card {
     margin-bottom: 0.5rem;
 }
+/* Tect color for title */
 .title {
     color:white
 }
+/* Text color for subtitle */
 .subtitle {
     color: #fff;
 }
-
+/* Sets the border width of "a" elements */
 a{
     border-width: 10px;
 }
-
+/* Sets color of text for element id "Directions */
 #directions {
     color: black !important;
 }
+/* Centers aqi_number */
 .aqi-number{
     text-align: center;
 }
+/* Rounds border of plot */
 .main-svg{
     border-radius: 5%;
 }
-
+/* Ads text border on for texton Hero img */
 .header-title{
-    -webkit-text-stroke: 2px #0b626b;
+    text-shadow: 1px 1px 0 #0b626b,-1px 1px 0 #0b626b,1px -1px 0 #0b626b,-1px -1px 0 #0b626b;
 }
-
+/* Mobile responsive */
 @media only screen and (max-width: 1300px){
 
     #results-card{
