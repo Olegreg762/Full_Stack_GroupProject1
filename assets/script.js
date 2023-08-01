@@ -31,7 +31,7 @@ function plot_aqi(div, aqi_number){
           mode: "number+gauge",
           value: aqi_number,
           domain: { x: [0, 1], y: [0, 1] },
-          title: {text: "<b>AQI</b>"},
+          title: {text: `<b>${title}</b>`},
           gauge: {
           shape: "gauge",
           axis: { 
@@ -50,7 +50,7 @@ function plot_aqi(div, aqi_number){
               { range: [200, 300], color: "purple"},
               { range: [300,500], color: "maroon"}
           ],
-          bar: {color: "white"},
+          bar: {color: "black"},
           }
       }
       ];
