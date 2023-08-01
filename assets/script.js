@@ -1,13 +1,19 @@
+// jQuery function await to execute code until after page is loaded
 $(document).ready(function(){
-  $("#state_selector").change(function(){
+  // Event listener for the stateSelect for changes is the selected state
+  $("#stateSelect").change(function(){
+    // Set Value of variable to the selected state
     let state_choice = $(this).val();
+    // Calls function in epa_api.js to request park data from that state
     get_park_aqi(state_choice)
   })
 })
-
+// Function for creating plot based on AQI number
 function plot_aqi(div, aqi_number){
+  // Variables to used by function
   let font_color = ""
   let title = "AQI"
+  // Changes color of text based upon the AQI number
   if(aqi_number < 50){
     font_color = "green"
   }else if(aqi_number <100){
@@ -21,9 +27,12 @@ function plot_aqi(div, aqi_number){
   }else if(aqi_number<500){
     font_color = "crimson"
   }else{
+    // If no number is given to function it will set text color to black
     font_color = "black"
+    // Sets title to be "N/A" for no data
     title = "N/A"
   };
+  // Parameters for plot
   const data = [
       {
 
@@ -69,6 +78,6 @@ function plot_aqi(div, aqi_number){
                      }
       };
       const config = { responsive: true };
-
+      // Creates plot in element id given by get_park_aqi
       return Plotly.newPlot(div, data, layout, config);
   };
